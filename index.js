@@ -74,7 +74,14 @@ class Table {
 
   draw() {
     const { top } = this.ele.getClientRects()[0]
-    const broswerHeight = window.innerHeight
+    let broswerHeight = window.innerHeight
+    let broswerWidth = window.innerWidth
+    let { width } = document.querySelector('.container').getClientRects()[0]
+
+    if (broswerHeight > broswerWidth) {
+      broswerHeight = width + top
+    }
+
     const tableHeight = broswerHeight - top - 20
     const blockHeight = Math.floor(tableHeight / this.size)
 

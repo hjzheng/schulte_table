@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>schulte_table</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .schulte_table {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    @media print {
+    }
+  </style>
+  <body class="container">
+    <div class="row">
+      <h1>舒格尔方格</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-11">
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <select class="form-control" id="size_input">
+              <option value="3">3*3</option>
+              <option value="4">4*4</option>
+              <option value="5">5*5</option>
+              <option value="6">6*6</option>
+            </select>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <button class="btn btn-success" id="gen_btn" type="button">
+              生成方格
+            </button>
+          </div>
+          <div class="col-lg-2 col-md-3">
+            时间:
+            <span id="timer"></span>
+            秒
+          </div>
+        </div>
+      </div>
+      <!-- /.col-lg-6 -->
+      <div class="col-lg-4 col-md-1"></div>
+      <!-- /.col-lg-6 -->
+    </div>
+    <div class="row">
+      <div id="table" class="schulte_table"></div>
+    </div>
+    <!-- /.row -->
+  </body>
+  <script src="./index.js"></script>
+</html>

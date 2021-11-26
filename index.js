@@ -69,6 +69,12 @@ class Table {
         alert(`恭喜，你完成了测试，你的成绩是${this.timer.seconds}秒`)
       }
     } else {
+      if (targetEle.style.backgroundColor !== 'green') {
+        targetEle.style.backgroundColor = 'red'
+        setTimeout(() => {
+          targetEle.style.backgroundColor = ''
+        }, 300)
+      }
       console.log('出错了')
     }
   }

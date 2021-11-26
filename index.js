@@ -55,7 +55,7 @@ class Table {
 
     let current = Number(targetEle.dataset.number)
 
-    if (this.currentNumber === 1) {
+    if (current === 1) {
       this.timer.start()
     }
 

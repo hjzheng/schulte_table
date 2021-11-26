@@ -35,6 +35,7 @@ class Timer {
 
   reset() {
     this.id && clearInterval(this.id)
+    this.id = null
     this.seconds = 0
     this.ele.innerHTML = this.seconds
   }
@@ -55,7 +56,7 @@ class Table {
 
     let current = Number(targetEle.dataset.number)
 
-    if (current === 1) {
+    if (current === 1 && this.timer.id === null) {
       this.timer.start()
     }
 
